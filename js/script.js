@@ -6,7 +6,7 @@ $(function() {
 	map = L.map('map').setView([40.71,-73.95], 13);
 
 	// add tile layer
-L.tileLayer('http://openmapsurfer.uni-hd.de/tiles/roadsg/x={x}&y={y}&z={z}', {
+L.tileLayer('http://{s}.tiles.mapbox.com/v3/examples.map-i875mjb7/{z}/{x}/{y}.png', {
 	attribution: 'Concert data from last.fm',
     	maxZoom: 18
 }).addTo(map);
