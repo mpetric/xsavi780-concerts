@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Leaftlet Project: NYC Concerts</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="js/script.js"></script>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+
+</head>
+<body>
+	<h2>Leaflet Project: NYC Concerts from last.fm API</h2>
+	<div id="map"></div>
+	<p>Map uses Google Spreadsheet as backend. Spreadsheet uses ImportJSON script to call last.fm API and return next 300 events in 25 mile radius of NYC. Sheet located <a href="https://docs.google.com/spreadsheets/d/1erb6YP-gZ9iFyl3UAOLQ7BvjVSRTgrQqmiMVRmvYzxY/edit?usp=sharing">here</a> (See cell B2).</p>
+	<p><strong>Issue 1: </strong>When multiple events at same location, Leaflet selects only event with greatest date (furthest down the spreadsheet). Need to figure out how to show earliest event.</p>
+	<p><strong>Issue 2: </strong>Delay in loading data to Google Spreadsheet using last.fm API during first load of map. (Markers will not show up on map and refresh is required.)</p>
+</body>
+</html>
